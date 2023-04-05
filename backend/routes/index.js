@@ -2,6 +2,8 @@ var express = require('express');
 const database = require("../dbPool");
 var router = express.Router();
 
+//!!!!!ROUTE INUTILISEE (tests)
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.json({ "a": "a", "b": "b" });
