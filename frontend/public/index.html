@@ -1,115 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test API</title>
-  <script>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+        
+    <title>Home - Feet Dreams</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js" crossorigin></script>
 
-    async function getUser() {
-      await fetch(`http://localhost:3000/`, { //port 3000 = serveur backend
-        method: 'GET',
-      })
-        .then(response => console.log(response) || response.json()) //1e ".then" => le fetch a renvoyé une "response", response.json renvoie une promesse au 2 eme ".then"
-        .then(data => { //2e ".then" = "data" contiend le payload de la réponse (un objet créé a partir d'un message json)
-          ///////TRAITEMENT DE L'OBJET OBTENU
-          const userInfo = document.getElementById('user-info');
-          console.log(data.a);
-          if (data.length === 0) {
-            userInfo.innerHTML = `User with email ${data.a} not found`;
-          }
-          else {
-            userInfo.innerHTML = `
-            <h2>${data.a}</h2>
-          `;
-          }
-          //////FIN
-        })
-        .catch(error => console.error(error));
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js" crossorigin></script>
 
-    }
-  </script>
-</head>
-<body>
-  <h1>Create User</h1>
-  <form onsubmit="submitForm(event)">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    <br>
-    <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" name="last_name" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <label for="phone_number">Phone Number:</label>
-    <input type="text" id="phone_number" name="phone_number">
-    <br>
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address">
-    <br>
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city">
-    <br>
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date">
-    <br>
-    <label for="hour">Hour:</label>
-    <input type="time" id="hour" name="hour">
-    <br>
-    <label for="zip_code">Zip Code:</label>
-    <input type="text" id="zip_code" name="zip_code">
-    <br>
-    <button type="submit">Submit</button>
-  </form>
+    <script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>
 
-  <h1>Update User</h1>
-  <form onsubmit="updateUser(event)">
-    <!-- Include the same fields as the "Create User" form for the "Update User" form -->
-  <label for="update_name">Name:</label>
-<input type="text" id="update_name" name="name" required>
-<br>
-<label for="update_last_name">Last Name:</label>
-<input type="text" id="update_last_name" name="last_name" required>
-<br>
-<label for="update_email">Email:</label>
-<input type="email" id="update_email" name="email" required>
-<br>
-<label for="update_phone_number">Phone Number:</label>
-<input type="text" id="update_phone_number" name="phone_number">
-<br>
-<label for="update_address">Address:</label>
-<input type="text" id="update_address" name="address">
-<br>
-<label for="update_city">City:</label>
-<input type="text" id="update_city" name="city">
-<br>
-<label for="update_date">Date:</label>
-<input type="date" id="update_date" name="date">
-<br>
-<label for="update_hour">Hour:</label>
-<input type="time" id="update_hour" name="hour">
-<br>
-<label for="update_zip_code">Zip Code:</label>
-<input type="text" id="update_zip_code" name="zip_code">
-<br>
-<button type="submit">Update</button>
-</form>
-  <h1>Search User by email</h1>
-  <form onsubmit="searchUser(event)">
-    <label for="search_mail">email:</label>
-    <input type="email" id="search_mail" name="email" required>
-    <br>
-    <button type="submit">Search</button>
-  </form>
-
-  <form>
-    <label for="email_response">Name:</label>
-    <input type="email" id="email_response" name="email">
-    <button type="button" onclick="getUser()">Get User</button>
-  </form>
-  <div id="user-info"></div>
-
-</body>
+    <script>var Alert = ReactBootstrap.Alert;</script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700&amp;display=swap"/>
+    <link rel="stylesheet" href="./assets/fonts/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./assets/css/aos.min.css"/>
+    <link rel="stylesheet" href="./assets/css/animate.min.css"/>
+    <link rel="stylesheet" href="./assets/css/Footer-with-social-media-icons.css"/>
+    <link rel="stylesheet" href="./assets/css/Live-Hours-of-Operation-styles.css"/>
+    <link rel="stylesheet" href="./assets/css/Live-Hours-of-Operation.css"/>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    <script src="assets/js/Live-Hours-of-Operation-jquery1.js"></script>
+  </body>
 </html>
