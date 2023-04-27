@@ -8,7 +8,8 @@ var pool =
         port: 3306,
         user: "root",
         password: "root",
-        database: "main_db"
+        database: "main_db",
+        dateStrings: true
 });
 
 // Expose a method to establish connection with MariaDB SkySQL
