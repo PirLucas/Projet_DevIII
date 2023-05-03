@@ -1,26 +1,31 @@
-var express = require('express');
+const express = require('express');
 const database = require("../dbPool");
-var router = express.Router();
+const moment = require("moment");
+const router = express.Router();
 
-
-router.get('/', async function(req, res, next) {
+router.get('/get-events', async (req, res) => {
   try {
-    const result = await database.pool.query(`select contenu from table_test where ID = ${req.query.clientID}`);
-    valeur = result
-    res.json({ valeur });
+      const start = moment(req.query.start).format('YYYY-MM-DD HH:mm:ss');
+      const end = moment(req.query.end).format('YYYY-MM-DD HH:mm:ss');
+
+      const result = await database.pool.query(`SELECT contenu FROM tableanamneses WHERE start >= ${req.query.start} AND end <= ${req.query.end}`);
+      res.send(result);
+      console.log(result);
+      console.log("the server is running");
   } catch (err) {
-    throw err;
+      console.log(err);
+      res.sendStatus(500);
   }
-  //res.send(`${req.query.clientID}`);
 });
 
-router.post('/', async function(req, res, next) {
+router.post('/create-event', async (req, res) => {
   try {
-    const result = await database.pool.query(`insert into main_db.tableanamneses(clientID, contenu) values(${req.query.clientID}, "${req.body.contenuBody}") `);
+      const result = await database.pool.query(`INSERT INTO main_db.tableanamneses(contenu, start, end) values (${req.query.contenu}, ${req.query.start}, ${req.query.end})`);
+      res.sendStatus(201);
   } catch (err) {
-    throw err;
+      console.log(err);
+      res.sendStatus(500);
   }
-  res.send(`${req.query.clientID}`);
 });
 
 router.put('/', async function(req, res, next) {
@@ -30,5 +35,9 @@ router.put('/', async function(req, res, next) {
 router.delete('/', function(req, res, next) {
   res.send(`${req.query.anamneseID}`);
 });
+
+
+
+
 
 module.exports = router;

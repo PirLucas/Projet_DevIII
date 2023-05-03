@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import DateTime from 'react-datetime';
 
 export default function ({isOpen, onClose, onEventAdded}) {
-    const [title, setTitle] = useState("");
+    const [contenu, setTitle] = useState("");
     const [start, setStart] = useState(new Date());
     const [end, setEnd] = useState(new Date());
 
@@ -11,7 +11,7 @@ export default function ({isOpen, onClose, onEventAdded}) {
         event.preventDefault();
 
         onEventAdded({
-            title,
+            contenu,
             start,
             end
         })

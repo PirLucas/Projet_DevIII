@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.6",
+    "@fullcalendar/daygrid": "^6.1.6",
+    "@fullcalendar/react": "^6.1.6",
+    "@rollup/plugin-terser": "^0.4.1",
+    "react-datetime": "^3.2.0"
+  }
+}

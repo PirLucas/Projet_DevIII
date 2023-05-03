@@ -7,7 +7,7 @@ var pool =
         host: "127.0.0.1",
         port: 3306,
         user: "root",
-        password: "root",
+        password: "vinoFRUITsql1602",
         database: "main_db",
         dateStrings: true
 });

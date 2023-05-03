@@ -12,6 +12,7 @@ import Header from "./components/header";
 import Tarifs from "./components/tarifs";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Calendar from "./components/Calendar";
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Temoignages/>
         <Contact/>
         <Footer/>
+        <Calendar/>
 
     </>
   );
