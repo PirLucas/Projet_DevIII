@@ -1,6 +1,4 @@
 import React from "react";
-import Intro from "../assets/img/intro-bg.jpg";
-import MovingGif from "../assets/img/ezgif.com-video-to-gif.gif";
 import Background from "../assets/img/downloads-bg.jpg";
 
 function Tarifs(paramDict) {//doit commencer avec une majuscule
@@ -42,7 +40,7 @@ function Tarifs(paramDict) {//doit commencer avec une majuscule
                             </div>
                         </div>
                     </div>
-                    <p style={{margin: "17px"}}>Prenez rendez-vous</p><button className="btn btn-primary btn-lg btn-default" type="button">Rendez-vous</button>
+                    <p style={{margin: "17px"}}>Prenez rendez-vous</p><button className="btn btn-primary btn-lg btn-default" type="button" style={{margin: "17px" }}>Rendez-vous</button>
                 </div>
             </div>
         </section>

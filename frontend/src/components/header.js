@@ -10,7 +10,7 @@ function Header(paramDict) {//doit commencer avec une majuscule
                     <div className="row justify-content-end">
                         <div className="col-lg-8 mx-auto">
                             <h1 className="text-break text-uppercase text-center justify-content-xxl-center align-items-xxl-center brand-heading" data-bs-toggle="tooltip" data-bss-tooltip="">La refléxologie plantaire</h1>
-                            <p className="intro-text">A free, responsive, one page Bootstrap theme.<br/>Created with love.</p><a className="btn btn-link btn-circle" role="button" href="#about"><i className="fa fa-angle-double-down animated"></i></a>
+                            <p className="intro-text">Un texte d'introduction<br/>Créer avec amour</p><a className="btn btn-link btn-circle" role="button" href="#about"><i className="fa fa-angle-double-down animated"></i></a>
                         </div>
                     </div>
                 </div>
