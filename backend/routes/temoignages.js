@@ -19,7 +19,7 @@ router.post('/', async function(req, res, next) {
         const result = await database.pool.query(`select * from tableclients where mail = "${req.query.clientMail}"`);
         console.log(result)
         if (result.length == 0) {
-            res.json({rep : `Cette adresse mail ne correspond a aucun client`});
+            res.json({rep : `Une erreur est survenue`});
             return
         }
         else {
