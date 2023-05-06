@@ -5,11 +5,11 @@ const database = require("../dbPool");
 router.get('/', async function(req, res, next) {
 
   console.log(Object.keys(req.query)[0])
-  if(Object.keys(req.query)[0] == "clientID") {
-    try {
 
-      const result = await database.pool.query(`select * from tablerdv where rdvID = ${req.query.clientID}`);
-      valeur = result
+  if(Object.keys(req.query)[0] == "clientID") {
+
+    try {
+      let valeur = await database.pool.query(`select * from tablerdv where rdvID = ${req.query.clientID}`);
       res.json({valeur});
     } catch (err) {
       console.log(err);
@@ -31,8 +31,57 @@ router.get('/', async function(req, res, next) {
   }
 });
 
-router.post('/', function(req, res, next) {
-  res.send(`${req.query.rdvDate}`);
+router.post('/', async function(req, res, next) {
+
+  try {
+    const result = await database.pool.query(`select clientID from tableclients where mail = "${req.query.email}"`);
+    if (result.length == 0) {
+      try {
+        let query = `insert into tableclients(clientNom, clientPrenom, clientGSM, mail) values(?, ?, ?, ?)`
+        await database.pool.query(query, [req.body.nom, req.body.prenom, req.body.tel, req.body.email])
+        }
+        catch (err) {
+          res.json({rep :"Erreur lors de la création du client"});
+          return;
+        }
+        try {
+        const result = await database.pool.query(`select clientID from tableclients where mail = "${req.query.email}"`);
+        clientID = result[0].clientID
+        }
+        catch (err) {
+          res.json({rep :"Erreur lors de la vérification de l'exitense du client"});
+          return;
+        }
+    }
+    else {
+      clientID = result[0].clientID
+    }
+  }
+  catch (err) {
+      res.json({rep :"Erreur lors de la vérification de l'exitense du client"});
+      return;
+  }
+
+  try {
+    let memeRdv = await database.pool.query(`select * from tablerdv where rdvDate = "${req.body.date}" and rdvHeure = "${req.body.heure}" and service = "${req.body.service}"`);
+    if (memeRdv.length == 0) {
+      try {
+        let query = `insert into tablerdv(clientID, rdvDate, rdvHeure, service) values (?, ?, ?, ?)`
+        await database.pool.query(query, [clientID, req.body.date, req.body.heure, req.body.service]);
+      }
+      catch (err) {
+        res.json({rep :"Erreur lors de la création du rendez-vous"});
+        return;
+      }
+      res.json({rep : `Le rendez-vous est enregistré`});
+    }
+    else {
+      res.json({rep : `Le rendez-vous est déjà pris`});
+    }
+  }
+    catch (err) {
+      res.json({rep :"Erreur lors de la vérification de l'exitense du rendez-vous"});
+    }
 });
 
 module.exports = router;
