@@ -1,17 +1,22 @@
 import React, {useState} from "react";
 import Modal from "react-modal";
 import DateTime from 'react-datetime';
+import "react-datetime/css/react-datetime.css";
 
-export default function ({isOpen, onClose, onEventAdded}) {
-    const [contenu, setTitle] = useState("");
+function AddEventModal({isOpen, onClose, onEventAdded}) {
+    const [clientID, setClient] = useState(0);
+    const [title, setTitle] = useState("");
     const [start, setStart] = useState(new Date());
     const [end, setEnd] = useState(new Date());
 
-    const onSubmit = (event) => {
-        event.preventDefault();
+    const onSubmit = (e) => {
+        e.preventDefault();
 
         onEventAdded({
-            contenu,
+            extendedProps: {
+                clientID,
+            },
+            title,
             start,
             end
         })
@@ -19,10 +24,18 @@ export default function ({isOpen, onClose, onEventAdded}) {
     }
 
     return (
-        <Modal isOpen={isOpen} onRequestClose={onClose}>
+        <Modal ariaHideApp={false} isOpen={isOpen} onRequestClose={onClose}>
             <form onSubmit={onSubmit}>
-                <input placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
-
+                <div>
+                    <label>Add a title</label>
+                    <br/>
+                <input placeholder="title" value={title} onChange={e => setTitle(e.target.value)} />
+                </div>
+                <div>
+                    <label>Client Number</label>
+                    <br/>
+                    <input placeholder="clientID" value={clientID} onChange={e => setClient(parseInt(e.target.value))}/>
+                </div>
                 <div>
                     <label>Start Date</label>
                     <DateTime value={start} onChange={date => setStart(date)} />
@@ -39,3 +52,5 @@ export default function ({isOpen, onClose, onEventAdded}) {
         </Modal>
     )
 }
+
+export default AddEventModal;

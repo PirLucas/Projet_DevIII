@@ -1,43 +1,38 @@
-const express = require('express');
+var express = require('express');
+var router = express.Router();
 const database = require("../dbPool");
-const moment = require("moment");
-const router = express.Router();
 
-router.get('/get-events', async (req, res) => {
-  try {
-      const start = moment(req.query.start).format('YYYY-MM-DD HH:mm:ss');
-      const end = moment(req.query.end).format('YYYY-MM-DD HH:mm:ss');
+router.get('/', async function(req, res, next) {
 
-      const result = await database.pool.query(`SELECT contenu FROM tableanamneses WHERE start >= ${req.query.start} AND end <= ${req.query.end}`);
-      res.send(result);
-      console.log(result);
-      console.log("the server is running");
-  } catch (err) {
+  console.log(Object.keys(req.query)[0])
+  if(Object.keys(req.query)[0] == "clientID") {
+    try {
+
+      const result = await database.pool.query(`select * from tablerdv where rdvID = ${req.query.clientID}`);
+      valeur = result
+      res.json({valeur});
+    } catch (err) {
       console.log(err);
-      res.sendStatus(500);
+    }
+  }
+  else if(Object.keys(req.query)[0] == "rdvDate") {
+    try {
+
+
+// Display the result
+      console.log(req.query.rdvDate)
+      const result = await database.pool.query(`select rdvDate from tablerdv`);
+      valeur = result
+      console.log(result)
+      res.json({valeur});
+    } catch (err) {
+      console.log(err);
+    }
   }
 });
 
-router.post('/create-event', async (req, res) => {
-  try {
-      const result = await database.pool.query(`INSERT INTO main_db.tableanamneses(contenu, start, end) values (${req.query.contenu}, ${req.query.start}, ${req.query.end})`);
-      res.sendStatus(201);
-  } catch (err) {
-      console.log(err);
-      res.sendStatus(500);
-  }
+router.post('/', function(req, res, next) {
+  res.send(`${req.query.rdvDate}`);
 });
-
-router.put('/', async function(req, res, next) {
-  res.send(`${req.query.anamneseID}`);
-});
-
-router.delete('/', function(req, res, next) {
-  res.send(`${req.query.anamneseID}`);
-});
-
-
-
-
 
 module.exports = router;

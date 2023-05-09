@@ -3,7 +3,7 @@ import React from "react";
 function Footer(paramDict) {//doit commencer avec une majuscule
     return(
         <footer id="footerpad">
-            <div className="container">
+            <div className="Footer">
                 <div className="row">
                     <div className="col-md-6 col-lg-8 mx-auto">
                         <ul className="list-inline text-center">

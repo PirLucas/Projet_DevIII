@@ -1,6 +1,4 @@
 import React from "react";
-import Intro from "../assets/img/intro-bg.jpg";
-import MovingGif from "../assets/img/ezgif.com-video-to-gif.gif";
 import Background from "../assets/img/downloads-bg.jpg";
 
 function Tarifs(paramDict) {//doit commencer avec une majuscule

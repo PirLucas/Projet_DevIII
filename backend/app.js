@@ -12,7 +12,10 @@ var anamnesesRouter = require('./routes/anamneses');
 var mediasRouter = require('./routes/medias');
 var temoignagesRouter = require('./routes/temoignages');
 
-var app = express();
+const app = express();
+
+// enable CORS for specific domains
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,7 +26,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors())
+
+
 
 app.use('/', indexRouter);
 app.use('/rendezvous', rendezvousRouter);
@@ -32,11 +36,12 @@ app.use('/anamneses', anamnesesRouter);
 app.use('/medias', mediasRouter);
 app.use('/temoignages', temoignagesRouter);
 
+/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
+*/
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -48,7 +53,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-//app.listen(3001, function(){})
 
 module.exports = app;
