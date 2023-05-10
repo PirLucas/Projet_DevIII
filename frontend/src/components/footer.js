@@ -1,4 +1,9 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import '../assets/css/Footer-with-social-media-icons.css';
+
+
 
 function Footer(paramDict) {//doit commencer avec une majuscule
     return(

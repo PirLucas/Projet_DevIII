@@ -1,4 +1,6 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Map(paramDict) {//doit commencer avec une majuscule
     return(

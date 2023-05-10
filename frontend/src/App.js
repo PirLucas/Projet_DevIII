@@ -1,34 +1,24 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.js";
-import Temoignages from "./components/temoignages";
-import Nav from "./components/nav.js"
-import "./App.css"
-import Header from "./components/header";
-import Tarifs from "./components/tarifs";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
-import Calendar from "./components/Calendar";
-import Modal from 'react-modal';
-
-
-Modal.setAppElement('#root');
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Homepage from "./pages/homepage";
+import Rendezvous from "./pages/rendezvous";
+import AdminPanel from "./pages/admin-panel";
+import "./App.css";
 
 
 function App() {
 
-  return (
-    <>
-        <Nav/>
-        <Header/>
-        <Tarifs/>
-        <Temoignages/>
-        <Contact/>
-        <Footer/>
-        <Calendar/>
-
-    </>
-  );
+    return (
+        <Router>
+            
+            <Routes className="App">
+                <Route path="/" element={<Homepage/>}/>
+                <Route path="/rendezvous" element={<Rendezvous/>}/>
+                <Route path="/admin-panel" element={<AdminPanel/>}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

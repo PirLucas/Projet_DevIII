@@ -4,20 +4,26 @@
   "private": true,
   "dependencies": {
     "@fullcalendar/react": "^6.1.6",
+    "@fullcalendar/daygrid": "6.1.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.4.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "eslint-config-react-app": "7.0.1",
     "fullcalendar": "^6.1.6",
+    "jquery": "^3.6.4",
     "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-admin": "^4.10.2",
     "react-bootstrap": "^2.7.4",
     "react-datetime": "^3.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-modal": "^3.16.1",
+    "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "3.3.1"
   },
   "scripts": {
     "start": "set PORT=3001 && react-scripts start",
