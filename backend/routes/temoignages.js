@@ -3,8 +3,20 @@ const database = require("../dbPool");
 var router = express.Router();
 
 
-router.get('/', function(req, res, next) {
-    res.send(`${req.query.clientID}`);
+router.get('/', async function(req, res, next) {
+    let result
+    try {
+        //const result = await database.pool.query(`insert into main_db.tabletemoignages(clientID, contenu, date) values(${clientID}, "${req.body.contenu}", "${date}") `);
+        query = `select * from main_db.tabletemoignages`
+
+        //const result = await database.pool.query(query, [clientID, req.body.contenu, date])
+        result = await database.pool.query(query,[])
+    } catch (err) {
+        throw err;
+    }
+    console.log(req.query.temoignageId)
+    res.json({rep : result});
+    return
 });
 
 router.delete('/', function(req, res, next) {
@@ -33,7 +45,8 @@ router.post('/', async function(req, res, next) {
     //1.2 si mail existant: obtenir le clientID a partir de l'adresse mail
 
     //2 obtenir la date
-    date = "2023-04-24" //hardcodé
+    var date = new Date();
+    console.log(date.toISOString().slice(0,10));
     console.log("aaa",req.body)
     try {
         //const result = await database.pool.query(`insert into main_db.tabletemoignages(clientID, contenu, date) values(${clientID}, "${req.body.contenu}", "${date}") `);

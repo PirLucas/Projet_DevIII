@@ -3,8 +3,7 @@ import "./rdvFormulaire.css"
 import React from "react";
 
 function RendezvousFormulaire() {
-
-
+    console.log("t")
     const [nomValue] = useState("")
     const [emailValue] = useState("")
     const [telValue] = useState("")
