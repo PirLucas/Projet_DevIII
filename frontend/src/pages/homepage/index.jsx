@@ -5,7 +5,7 @@ import Tarifs from "../../components/tarifs";
 import Footer from "../../components/footer";
 import Calendar from "../../components/Calendar";
 import Map from "../../components/map";
-import AdminPanel from "../admin-panel";
+import AdminPanel from "../adminPanel";
 import NavComponent from "../../components/nav.js";
 
 

@@ -11,6 +11,7 @@ var dbRouter = require('./routes/db');
 var anamnesesRouter = require('./routes/anamneses');
 var mediasRouter = require('./routes/medias');
 var temoignagesRouter = require('./routes/temoignages');
+var adminPanelRouter = require('./routes/adminPanel');
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/db', dbRouter);
 app.use('/anamneses', anamnesesRouter);
 app.use('/medias', mediasRouter);
 app.use('/temoignages', temoignagesRouter);
+app.use('/adminPanel', adminPanelRouter);
 
 /*
 // catch 404 and forward to error handler

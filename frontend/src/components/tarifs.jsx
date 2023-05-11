@@ -1,4 +1,5 @@
 import React , {useEffect} from "react";
+import { Link } from "react-router-dom";
 import $ from 'jquery';
 import Background from "../assets/img/downloads-bg.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -51,7 +52,10 @@ function Tarifs(paramDict) {//doit commencer avec une majuscule
                             </div>
                         </div>
                     </div>
-                    <p style={{margin: "17px"}}>Prenez rendez-vous</p><button className="btn btn-primary btn-lg btn-default" type="button">Rendez-vous</button>
+                    <div>
+                        <p style={{margin: "17px"}}>Prenez rendez-vous</p>
+                        <Link to="/rendezvous" className="btn btn-primary btn-lg btn-default" role="button">Rendez-vous</Link>
+                    </div>                
                 </div>
             </div>
         </section>
