@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe4b7ed-38e0-4d40-be38-3614790248fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../backend/routes/temoignages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/temoignages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +40,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\Projet_DevIII\Projet_DevIII\frontend\src\components" />
+      <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\Projet_DevIII\Projet_DevIII\frontend\src\page" />
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\frontend\public" />
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\frontend\src" />
     </key>
@@ -93,6 +95,9 @@
       <workItem from="1679564400197" duration="13366000" />
       <workItem from="1682171758064" duration="1215000" />
       <workItem from="1682173048602" duration="25847000" />
+      <workItem from="1683283833824" duration="4451000" />
+      <workItem from="1683618733377" duration="7181000" />
+      <workItem from="1683744460180" duration="9374000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/rdvFormulaire.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/components</a> rdvFormulaire.jsx
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import {useState} from "react";</span>
+<span class="cstat-no" title="statement not covered" >import "./rdvFormulaire.css"<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+import React from "react";
+&nbsp;
+function <span class="fstat-no" title="function not covered" >RendezvousFormulaire(</span>) {
+<span class="cstat-no" title="statement not covered" >    console.log("t")</span>
+    const [nomValue<span class="cstat-no" title="statement not covered" >] = <span class="cstat-no" title="statement not covered" >useState("")<span class="cstat-no" title="statement not covered" ></span></span></span>
+    const [emailValue<span class="cstat-no" title="statement not covered" >] = <span class="cstat-no" title="statement not covered" >useState("")<span class="cstat-no" title="statement not covered" ></span></span></span>
+    const [telValue<span class="cstat-no" title="statement not covered" >] = <span class="cstat-no" title="statement not covered" >useState("")<span class="cstat-no" title="statement not covered" ></span></span></span>
+&nbsp;
+    function <span class="fstat-no" title="function not covered" >handleSubmit(</span>event) {
+<span class="cstat-no" title="statement not covered" >        event.preventDefault()</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        &lt;form onSubmit={handleSubmit} className="rdvFormulaire"&gt;
+            &lt;div className="container"&gt;
+                &lt;input name="nom" value={nomValue} placeholder="Nom Complet" id="nom"/&gt;
+                &lt;input name="email" value={emailValue} placeholder="Email" id="email"/&gt;
+                &lt;input name="telephone" value={telValue} placeholder="Numéro de téléphone" id="telephone"/&gt;
+                &lt;input type="date" name="date" id="date"/&gt;
+                &lt;input type="time" name="heure" id="heure"/&gt;
+                &lt;select id="service"&gt;
+                    &lt;option value="option1"&gt;Service 1&lt;/option&gt;
+                    &lt;option value="option2"&gt;Service 2&lt;/option&gt;
+                    &lt;option value="option3"&gt;Service 3&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div className="extraButton"&gt;
+                &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    )
+}
+&nbsp;
+export default <span class="cstat-no" title="statement not covered" >RendezvousFormulaire<span class="cstat-no" title="statement not covered" >;</span></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 11 2023 11:34:41 GMT+0200 (heure d’été d’Europe centrale)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

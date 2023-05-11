@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/tarifs.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/components</a> tarifs.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import React from "react";</span>
+<span class="cstat-no" title="statement not covered" >import Background from "../assets/img/downloads-bg.jpg";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+function <span class="fstat-no" title="function not covered" >Tarifs(</span>paramDict) {//doit commencer avec une majuscule
+<span class="cstat-no" title="statement not covered" >    return(</span>
+        &lt;section className="text-center download-section content-section" id="tarifs" style={{backgroundImage: `url(${Background})`}}&gt;
+            &lt;div className="container"&gt;
+                &lt;div className="col-lg-8 mx-auto"&gt;
+                    &lt;div className="container demo-bg" style={{background: "var(--bs-border-color-translucent)", borderColor: "var(--bs-blue)"}}&gt;
+                        &lt;div className="row"&gt;
+                            &lt;div className="col-sm-8"&gt;
+                                &lt;ul className="list-unstyled prices"&gt;
+                                    &lt;li&gt;&lt;span className="pull-right"&gt;&lt;/span&gt;&lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;h1&gt;Tarifs&lt;/h1&gt;
+                                &lt;div className="tarifs me-xl-0 ms-xl-5" style={{width: "310px", margin: "11px"}}&gt;
+                                    &lt;div style={{display: "grid", margin: "0px 0px 0px 25px", padding: "0px"}}&gt;
+                                        &lt;ul className="list-unstyled text-center"&gt;
+                                            &lt;li className="me-xl-0"&gt;&lt;span className="pull-right"&gt;10€&lt;/span&gt;1 séance&lt;/li&gt;
+                                            &lt;li&gt;&lt;span className="pull-right"&gt;50€&amp;nbsp;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;10 séances&lt;/li&gt;
+                                            &lt;li&gt;&lt;span className="pull-right"&gt;100€&lt;/span&gt;20 séances&lt;/li&gt;
+                                            &lt;li&gt;&lt;span className="pull-right"&gt;jsp €&lt;/span&gt;extra ?&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div className="col-sm-4"&gt;
+                                &lt;div className="business-hours"&gt;
+                                    &lt;h2 className="title"&gt;Horaires d'ouverture&lt;/h2&gt;
+                                    &lt;ul className="list-unstyled opening-hours"&gt;
+                                        &lt;li&gt;Dimanche &lt;span className="pull-right"&gt;Fermé&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Lundi &lt;span className="pull-right"&gt;Fermé&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Mardi &lt;span className="pull-right"&gt;10h-20h&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Mercredi &lt;span className="pull-right"&gt;10h-18h&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Jeudi &lt;span className="pull-right"&gt;10h-18h&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Vendredi &lt;span className="pull-right"&gt;10h-18h&lt;/span&gt;&lt;/li&gt;
+                                        &lt;li&gt;Samedi &lt;span className="pull-right"&gt;10h-16h&lt;/span&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;p style={{margin: "17px"}}&gt;Prenez rendez-vous&lt;/p&gt;&lt;button className="btn btn-primary btn-lg btn-default" type="button" style={{margin: "17px" }}&gt;Rendez-vous&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    )
+}
+&nbsp;
+export default <span class="cstat-no" title="statement not covered" >Tarifs<span class="cstat-no" title="statement not covered" >;</span></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 11 2023 11:34:41 GMT+0200 (heure d’été d’Europe centrale)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
