@@ -4,6 +4,7 @@ import React from "react";
 
 function RendezvousFormulaire() {
 
+
     let resultat = ""
 
     function hourToSeconds(time) {
@@ -12,6 +13,7 @@ function RendezvousFormulaire() {
     }
 
     async function PostRdvForm(event) {
+
 
         event.preventDefault()
 

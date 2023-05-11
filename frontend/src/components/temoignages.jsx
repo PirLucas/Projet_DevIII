@@ -50,7 +50,7 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
     return(
         <div style={{border: "2px solid black"}}>
             <h1 align={"center"}>TEMOIGNAGES</h1>
-            <form style={{align:"center"}} onSubmit={postTemoignage}>
+            <form align={"center"} onSubmit={postTemoignage}>
                 <label>
                     Mail:
                     <input type="text" name="mail" />
@@ -58,7 +58,6 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
                 <br/>
                 <label>
                     Contenu:
-                    <textarea name="contenu" rows="10" cols="50"/>
                     <textarea id={"temoignageArea"} type="text" name="contenu" rows="10" cols="50"/>
                 </label>
                 <br/>
