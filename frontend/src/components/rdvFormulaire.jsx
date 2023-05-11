@@ -1,11 +1,12 @@
+import "./rdvFormulaire.css"
 
 import React from "react";
 
 
 function RendezvousFormulaire() {
 
-
     let resultat = ""
+
 
     function hourToSeconds(time) {
         const [hours, minutes] = time.split(':');
@@ -53,7 +54,8 @@ function RendezvousFormulaire() {
     }
 
     return (
-        <div className="card" style={{width: '500px'}}>
+
+        <div className="card">
             <div className="card-header">
                 <div className="text-header">Prendre rendez-vous</div>
             </div>
@@ -103,7 +105,9 @@ function RendezvousFormulaire() {
                         </fieldset>
                     </div>
 
-                    <input type="submit" className="btn float-end" value="submit" />
+
+                    <input type="submit" className="btn" value="submit"/>
+
                 </form>
             </div>
             <label className="resultLabel" id="resultat"></label>

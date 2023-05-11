@@ -1,49 +1,76 @@
-.rdvFormulaire{
-    justify-content: center;
+.card {
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 10px;
 }
 
-.rdvFormulaire input{
-    width: calc(100% / 4);
-    height: 50px;
-    margin: 20px 20px;
-    background-color: darkgray;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    color: #fff;
-}
-
-.extraButton {
-    margin-top: 20px;
+.card-header {
+    background-color: #333;
+    padding: 16px;
     text-align: center;
 }
 
-.rdvFormulaire button{
-    height: 40px;
-    width: 150px;
-    background-color: #6a1a21;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-
-}
-
-.rdvFormulaire select {
-    width: calc(100% / 4);
-    height: 50px;
-    margin: 20px 20px;
-    background-color: darkgray;
-    border: none;
-    border-radius: 5px;
+.card-header .text-header {
+    margin: 0;
     font-size: 18px;
-    color: black;
-    cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 
-.container{
+.card-body {
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 90%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 12px 24px;
+    margin-left: 13px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+.form-group input[type="radio"]{
+    margin: 0.4rem;
+}
+
+.divRadio{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+
+.resultLabel{
+    margin: 20px;
 }
