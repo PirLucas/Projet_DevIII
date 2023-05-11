@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require('cors')
 
 var indexRouter = require('./routes/index');
+
 var rendezvousRouter = require('./routes/rendezvous');
 var dbRouter = require('./routes/db');
 var anamnesesRouter = require('./routes/anamneses');
@@ -18,6 +19,7 @@ const app = express();
 // enable CORS for specific domains
 app.use(cors());
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -27,6 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+<<<<<<< HEAD
 
 
 
@@ -37,13 +40,13 @@ app.use('/anamneses', anamnesesRouter);
 app.use('/medias', mediasRouter);
 app.use('/temoignages', temoignagesRouter);
 app.use('/adminPanel', adminPanelRouter);
+app.use(cors())
 
-/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
-*/
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -54,6 +57,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 module.exports = app;

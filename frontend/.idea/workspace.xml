@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfe4b7ed-38e0-4d40-be38-3614790248fc" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/../backend/dbPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/dbPool.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/routes/rendezvous.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/rendezvous.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/routes/temoignages.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/routes/temoignages.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/appelsHTTP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+>>>>>>> 280cc6638 (mise en place frontend et backend)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+=======
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> 280cc6638 (mise en place frontend et backend)
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -42,7 +55,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+>>>>>>> 280cc6638 (mise en place frontend et backend)
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -53,7 +70,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\Projet_DevIII\Projet_DevIII\frontend\src\components" />
+=======
+>>>>>>> 280cc6638 (mise en place frontend et backend)
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\frontend\public" />
       <recent name="C:\Users\lulub\Desktop\ZoneDeTravail\Ecole-Professionel\Ecole\TI\2eme\Cours\devIII\frontend\src" />
     </key>
@@ -93,8 +113,11 @@
       <option name="presentableId" value="Default" />
       <updated>1679564398719</updated>
       <workItem from="1679564400197" duration="13366000" />
+<<<<<<< HEAD
       <workItem from="1682171758064" duration="1215000" />
       <workItem from="1682173048602" duration="17861000" />
+=======
+>>>>>>> 280cc6638 (mise en place frontend et backend)
     </task>
     <servers />
   </component>
@@ -111,6 +134,9 @@
         </entry>
       </map>
     </option>
+<<<<<<< HEAD
     <option name="oldMeFiltersMigrated" value="true" />
+=======
+>>>>>>> 280cc6638 (mise en place frontend et backend)
   </component>
 </project>
