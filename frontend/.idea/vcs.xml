@@ -2,9 +2,13 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
 =======
 >>>>>>> 280cc6638 (mise en place frontend et backend)
+=======
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+>>>>>>> 1a0090418 (ajout de l'us témoignages et réorganisation en structure react correcte)
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

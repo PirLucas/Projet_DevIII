@@ -1,3 +1,4 @@
+
 import React, {useEffect} from "react";
 import {Tooltip} from "bootstrap";
 import Intro from "../assets/img/intro-bg.jpg";
@@ -49,6 +50,7 @@ function Header(paramDict) {//doit commencer avec une majuscule
                             >
                                 <i className="fa fa-angle-double-down animated"></i>
                             </a>
+
                         </div>
                     </div>
                 </div>

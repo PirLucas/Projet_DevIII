@@ -1,14 +1,11 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import '../assets/css/Footer-with-social-media-icons.css';
-
 
 
 function Footer(paramDict) {//doit commencer avec une majuscule
     return(
         <footer id="footerpad">
             <div className="Footer">
+
                 <div className="row">
                     <div className="col-md-6 col-lg-8 mx-auto">
                         <ul className="list-inline text-center">
