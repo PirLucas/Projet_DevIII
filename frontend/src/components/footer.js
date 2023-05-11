@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/Footer-with-social-media-icons.css";
 
 
 function Footer(paramDict) {//doit commencer avec une majuscule

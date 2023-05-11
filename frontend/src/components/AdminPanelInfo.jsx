@@ -2,7 +2,6 @@ import ProtectedRoute from './ProtectedRoute';
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/css/animate.min.css';
 import Desk from "../assets/img/desk.jpg";
 import Boy from "../assets/img/boy.jpg";
 import "../assets/css/Profile-with-data-and-skills.css";

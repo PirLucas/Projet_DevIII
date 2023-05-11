@@ -3,7 +3,6 @@ import React, {useEffect} from "react";
 import {Tooltip} from "bootstrap";
 import Intro from "../assets/img/intro-bg.jpg";
 import MovingGif from "../assets/img/ezgif.com-video-to-gif.gif";
-import '../assets/css/animate.min.css';
 import '../assets/fonts/font-awesome.min.css';
 import '../assets/css/style-font.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +24,7 @@ function Header(paramDict) {//doit commencer avec une majuscule
                 style={{
                     backgroundImage: `url(${MovingGif})`,
                     backgroundSize: "cover",
-                    height: "525px"
+                    height: "825px",
                 }}
             >
                 <div className="container">

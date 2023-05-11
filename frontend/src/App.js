@@ -5,7 +5,7 @@ import Homepage from "./page/homepage";
 import Rendezvous from "./page/rendezvous";
 import "./App.css"
 
-import AdminPanel from "./pages/adminPanel";
+import AdminPanel from "./page/adminPanel";
 import Calendar from "./components/Calendar";
 import Login from './components/Login';
 import Informations from "./page/informations";
@@ -17,19 +17,6 @@ function App() {
     return (
         <Router>
 
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li>
-                        <Link to="/rendezvous">Rendez-vous</Link>
-                    </li>
-                    <li>
-                        <Link to="/informations">Informations</Link>
-                    </li>
-                </ul>
-            </nav>
 
             <Routes className="App">
                 <Route path="/login" element={<Login/>}/>
