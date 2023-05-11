@@ -1,4 +1,5 @@
 
+
 import React from "react";
 
 function Temoignages(paramDict) {//doit commencer avec une majuscule
@@ -43,7 +44,7 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
     return(
         <div style={{border: "2px solid black"}}>
             <h1 align={"center"}>TEMOIGNAGES</h1>
-            <form align={"center"} onSubmit={postTemoignage}>
+            <form style={{align:"center"}} onSubmit={postTemoignage}>
                 <label>
                     Mail:
                     <input type="text" name="mail" />
@@ -51,7 +52,7 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
                 <br/>
                 <label>
                     Contenu:
-                    <textarea type="text" name="contenu" rows="10" cols="50"/>
+                    <textarea name="contenu" rows="10" cols="50"/>
                 </label>
                 <br/>
                 <button type="submit" value="Submit" >Submit</button>
