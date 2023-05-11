@@ -1,7 +1,6 @@
 
 import React from "react";
-//import { Tooltip } from 'bootstrap';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import Homepage from "./page/homepage";
 import Rendezvous from "./page/rendezvous";
 import "./App.css"
@@ -26,6 +25,7 @@ function App() {
             </Routes>
         </Router>
     );
+
 
 
 }

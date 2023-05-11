@@ -1,3 +1,4 @@
+
 import React from "react";
 
 
@@ -105,6 +106,7 @@ function RendezvousFormulaire() {
             </div>
             <label className="resultLabel" id="resultat"></label>
         </div>
+
     )
 }
 
