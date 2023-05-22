@@ -5,11 +5,11 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
     const [isLoading, setIsLoading] = useState(false);
     let texte = "placeholder"
 
-    async function postTemoignage() {
+    async function getTemoignage() {
 
         setIsLoading(true)
         await fetch(`http://localhost:3000/temoignages?` + new URLSearchParams({
-            temoignageId: 1,
+            clientID: 1,
         }), { //port 3000 = serveur backend
             method: 'GET',
 
@@ -27,7 +27,7 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
             })
     }
     useEffect(() => {
-        postTemoignage()
+        getTemoignage()
     }, []);
 
 
@@ -36,12 +36,13 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
         return <div className="App">Loading...</div>;
     }
     return (
-        <div>
+        <div style={{margin: 100}}>
 
             {arr.map((value,index) =>{
                 return(
                 <div key={index} style={{border: "2px solid black"}}>
-                    <label>{String(value.contenu)}</label>
+                    <div>{String(value.clientID)}</div>
+                    <div>{String(value.contenu)}</div>
                 </div>)})}
 
 

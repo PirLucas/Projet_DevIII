@@ -59,7 +59,7 @@ function NavComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ marginRight: '10px' }}/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-          <Nav.Link eventKey="1" href="#about" className="active">Qu'est-ce que c'est ?</Nav.Link>
+          <Nav.Link eventKey="1" href="/informations" className="active">Qu'est-ce que c'est ?</Nav.Link>
       <Nav.Link eventKey="2" href="#tarifs">Tarifs</Nav.Link>
       <Nav.Link eventKey="3" href="#contact">Contact</Nav.Link>
       <Nav.Link eventKey="4" href="#videos">Videos</Nav.Link>

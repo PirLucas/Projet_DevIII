@@ -9,6 +9,7 @@ import AdminPanel from "./page/adminPanel";
 import Calendar from "./components/Calendar";
 import Login from './components/Login';
 import Informations from "./page/informations";
+import Anamneses from "./components/Anamneses";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/rendezvous" element={<Rendezvous/>}/>
                 <Route path="/adminPanel" element={<AdminPanel/>}/>
                 <Route path="/adminPanel/calendar" element={<Calendar/>}/>
+                <Route path="/adminPanel/anamneses" element={<Anamneses/>}/>
                 <Route path="/informations" element={<Informations/>}/>
             </Routes>
         </Router>

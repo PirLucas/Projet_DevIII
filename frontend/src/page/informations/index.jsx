@@ -6,10 +6,13 @@ import Footer from "../../components/footer";
 import React from "react";
 import "./style.css"
 import AffichageTemoignages from "../../components/affichageTemoignages";
+import NavComponent from "../../components/nav";
 
 function Informations() {
     return (
-        <div className="informations">
+        <div className="information">
+            <NavComponent/>
+            <Header/>
             <AffichageTemoignages/>
         </div>
     );

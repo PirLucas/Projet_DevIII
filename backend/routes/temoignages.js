@@ -7,14 +7,15 @@ router.get('/', async function(req, res, next) {
     let result
     try {
         //const result = await database.pool.query(`insert into main_db.tabletemoignages(clientID, contenu, date) values(${clientID}, "${req.body.contenu}", "${date}") `);
-        query = `select * from main_db.tabletemoignages`
+        query = `SELECT contenu, tabletemoignages.clientID, temoignageID
+FROM (SELECT clientID,  max(temoignageID) AS temoignageID from tabletemoignages GROUP BY clientID) AS A 
+JOIN tabletemoignages USING (temoignageID)`
 
         //const result = await database.pool.query(query, [clientID, req.body.contenu, date])
         result = await database.pool.query(query,[])
     } catch (err) {
         throw err;
     }
-    console.log(req.query.temoignageId)
     res.json({rep : result});
     return
 });

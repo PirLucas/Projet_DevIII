@@ -30,7 +30,7 @@ function Calendar() {
                 start: moment(data.start).format('YYYY-MM-DD HH:mm:ss'), // Format start datetime
                 end: moment(data.end).format('YYYY-MM-DD HH:mm:ss'), // Format end datetime
               };
-            const response = await fetch("http://localhost:3006/adminPanel/create-event", {
+            const response = await fetch("http://localhost:3000/adminPanel/create-event", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function Calendar() {
         try {
             const start = moment(data.start).toISOString();
             const end = moment(data.end).toISOString();
-            const response = await fetch(`http://localhost:3006/adminPanel/get-events?rdvStart=${start}&rdvEnd=${end}`, { 
+            const response = await fetch(`http://localhost:3000/adminPanel/get-events?rdvStart=${start}&rdvEnd=${end}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

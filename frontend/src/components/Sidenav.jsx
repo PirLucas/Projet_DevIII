@@ -5,8 +5,9 @@ import { FaAddressBook, FaCalendarAlt, FaDashcube } from 'react-icons/fa';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../assets/css/style-font.css';
+import {Nav} from "react-bootstrap";
 
-function Sidenav({onDashboardClick, onCalendarClick}) {
+function Sidenav({onDashboardClick, onCalendarClick, onAnamnesesClick=null}) {
 
     return (
         <div id="layoutSidenav_nav">
@@ -26,6 +27,11 @@ function Sidenav({onDashboardClick, onCalendarClick}) {
                   <div className="sb-nav-link-icon"><IconContext.Provider value={{ className: 'calendar-icon' }}><FaCalendarAlt /></IconContext.Provider></div>
                   <span>Calendrier</span>
                 </NavLink>
+                <NavLink className="nav-link" activeClassName="active" onClick={onAnamnesesClick}>
+                  <div className="sb-nav-link-icon"></div>
+                  <span>Anamneses</span>
+                </NavLink>
+
               </div>
             </div>
           </div>
