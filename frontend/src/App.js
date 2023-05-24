@@ -13,8 +13,6 @@ import Anamneses from "./components/Anamneses";
 
 
 function App() {
-
-
     return (
         <Router>
 

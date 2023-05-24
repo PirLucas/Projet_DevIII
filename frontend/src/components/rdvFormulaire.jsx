@@ -26,7 +26,7 @@ function RendezvousFormulaire() {
         let timeInSeconds = hourToSeconds(event.target.heure.value);
         timeInSeconds = toString(timeInSeconds)*/
 
-        await fetch('http://localhost:3000/rendezvous?' + new URLSearchParams({
+        await fetch('${process.env.REACT_APP_URL}/rendezvous?' + new URLSearchParams({
             email: event.target.email.value,
         }), {
             method: 'POST',

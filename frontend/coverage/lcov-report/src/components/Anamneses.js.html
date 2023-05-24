@@ -458,7 +458,7 @@ function <span class="fstat-no" title="function not covered" >Anamneses(</span>p
 <span class="cstat-no" title="statement not covered" >        setAfficheOuModifie(0)</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        console.log(event.target.contenu.value)</span>
-<span class="cstat-no" title="statement not covered" >        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({</span>
+<span class="cstat-no" title="statement not covered" >        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({</span>
             clientID : (clientID),
         }), { //port 3000 = serveur backend
             method: 'POST',
@@ -493,7 +493,7 @@ function <span class="fstat-no" title="function not covered" >Anamneses(</span>p
 <span class="cstat-no" title="statement not covered" >        setAfficheOuModifie(0)</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        console.log(event.target.contenu.value)</span>
-<span class="cstat-no" title="statement not covered" >        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({</span>
+<span class="cstat-no" title="statement not covered" >        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({</span>
             clientID : (clientID),
         }), { //port 3000 = serveur backend
             method: 'PUT',
@@ -526,7 +526,7 @@ function <span class="fstat-no" title="function not covered" >Anamneses(</span>p
     async function <span class="fstat-no" title="function not covered" >getAnamneses(</span>) {
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        setIsLoading(true)</span>
-<span class="cstat-no" title="statement not covered" >        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({</span>
+<span class="cstat-no" title="statement not covered" >        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({</span>
             //clientID: 1,
         }), { //port 3000 = serveur backend
             method: 'GET',

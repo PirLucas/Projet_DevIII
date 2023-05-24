@@ -6,9 +6,8 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
     let texte = "placeholder"
 
     async function getTemoignage() {
-
         setIsLoading(true)
-        await fetch(`http://localhost:3000/temoignages?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/temoignages?` + new URLSearchParams({
             clientID: 1,
         }), { //port 3000 = serveur backend
             method: 'GET',
@@ -37,6 +36,9 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
     }
     return (
         <div style={{margin: 100}}>
+            <h2>
+                Les Avis des Clients
+            </h2>
 
             {arr.map((value,index) =>{
                 return(

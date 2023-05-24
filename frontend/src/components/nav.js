@@ -39,7 +39,7 @@ function NavComponent() {
   }, [])
 
   return (
-    <div>
+    <div >
       <Helmet>
         <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" />
       </Helmet>

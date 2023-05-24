@@ -18,7 +18,7 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
             return
         }
         console.log(event.target.mail.value)
-        await fetch(`http://localhost:3000/temoignages?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/temoignages?` + new URLSearchParams({
             clientMail : String(event.target.mail.value),
         }), { //port 3000 = serveur backend
             method: 'POST',

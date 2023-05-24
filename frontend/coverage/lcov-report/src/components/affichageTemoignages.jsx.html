@@ -193,7 +193,7 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
     async function getTemoignage() {
 &nbsp;
         setIsLoading(true)
-        await fetch(`http://localhost:3000/temoignages?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/temoignages?` + new URLSearchParams({
             clientID: 1,
         }), { //port 3000 = serveur backend
             method: 'GET',

@@ -29,7 +29,7 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
         setAfficheOuModifie(0)
 
         console.log(event.target.contenu.value)
-        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({
             clientID : (clientID),
         }), { //port 3000 = serveur backend
             method: 'POST',
@@ -64,7 +64,7 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
         setAfficheOuModifie(0)
 
         console.log(event.target.contenu.value)
-        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({
             clientID : (clientID),
         }), { //port 3000 = serveur backend
             method: 'PUT',
@@ -97,7 +97,7 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
     async function getAnamneses() {
 
         setIsLoading(true)
-        await fetch(`http://localhost:3000/anamneses?` + new URLSearchParams({
+        await fetch(`${process.env.REACT_APP_URL}/anamneses?` + new URLSearchParams({
             //clientID: 1,
         }), { //port 3000 = serveur backend
             method: 'GET',
