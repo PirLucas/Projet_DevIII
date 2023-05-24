@@ -43,7 +43,7 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
             {arr.map((value,index) =>{
                 return(
                 <div key={index} style={{border: "2px solid black"}}>
-                    <div>{String(value.clientID)}</div>
+                    <div>{String(value.clientNom)} {String(value.clientPreNom)}</div>
                     <div>{String(value.contenu)}</div>
                 </div>)})}
 

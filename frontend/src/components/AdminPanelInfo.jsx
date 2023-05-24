@@ -15,7 +15,7 @@ import Anamneses from "./Anamneses";
 function AdminPanelInfo() {
 
     const [showCalendar, setShowCalendar] = useState(false);
-    const [showDashboard, setShowDashboard] = useState(false);
+    const [showDashboard, setShowDashboard] = useState(true);
     const [showAnamneses, setShowAnamneses] = useState(false);
 
     function handleCalendarClick() {
