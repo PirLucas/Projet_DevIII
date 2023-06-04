@@ -26,7 +26,7 @@ router.get('/', async function(req, res, next) {
     }
   }
 });
-
+                    //, fction de vérification du token, async.....
 router.post('/', async function(req, res, next) {
   try {
     //const result = await database.pool.query(`insert into main_db.tabletemoignages(clientID, contenu, date) values(${clientID}, "${req.body.contenu}", "${date}") `);
