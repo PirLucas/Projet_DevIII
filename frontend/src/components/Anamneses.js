@@ -128,7 +128,7 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
                 return(
                     <div>
                         <div key={key} style={{border: "2px solid black"}}>
-                            <div>client: {String(value.clientID)}</div>
+                            <div>client: {String(value.clientNom)} {String(value.clientPrenom)}</div>
                             {(value.contenu == null)? //si pas d'anamnese en db
                                 <div>
                                 <button id={"bouton"+ String(value.clientID)} onClick={e =>ajouterAnamnese(value.clientID)}>ajouter anamnèse</button>
