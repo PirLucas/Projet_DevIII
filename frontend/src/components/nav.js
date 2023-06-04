@@ -61,7 +61,7 @@ function NavComponent() {
           <Nav className="ms-auto">
           <Nav.Link eventKey="1" href="/informations" className="active">Qu'est-ce que c'est ?</Nav.Link>
       <Nav.Link eventKey="2" href="#tarifs">Tarifs</Nav.Link>
-      <Nav.Link eventKey="3" href="#contact">Contact</Nav.Link>
+      <Nav.Link eventKey="3" href="#footerpad">Contact</Nav.Link>
       <Nav.Link eventKey="4" href="#videos">Videos</Nav.Link>
       <Nav.Link eventKey="5" href="/rendezvous" className="tada animated" style={{backgroundColor: "#5c9688"}}>PRENDRE RENDEZ-VOUS</Nav.Link>
           </Nav>

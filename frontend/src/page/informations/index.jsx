@@ -16,9 +16,10 @@ function Informations() {
     return (
         <div className="information" className="masthead" style={{backgroundImage: `url(${Intro})`}}>
             <NavComponent/>
-            <div style={{margin: 100}}>Réflexologie Plantaire
+            <div style={{margin: 100}}>
+                <h1 style={{padding: 100}}>Réflexologie Plantaire</h1>
 
-                Qu'est-ce que la Réflexologie Plantaire ?
+                <h2>Qu'est-ce que la Réflexologie Plantaire ?</h2>
                 C’est une méthode manuelle et naturelle centrée sur l’autorégulation du corps humain. L’objectif est de soulager les symptômes en agissant sur des zones réflexes.
                 Selon la médecine chinoise, les pieds contiendraient une représentation miniaturisée du corps humain dont chaque terminaison nerveuse, appelée aussi zone réflexe, correspondrait à un organe ou une partie de l’organisme.
                 Quand un organe ou une partie du corps fonctionne mal, l’énergie est entravée, et ce blocage se répercute sur un point précis de la plante du pied.
@@ -36,7 +37,7 @@ function Informations() {
 
 
 
-                D’où vient la réflexologie ?
+                <h2>D’où vient la réflexologie ?</h2>
 
                 2000 ans avant Jésus-Christ, en Egypte. (C’est dans le tombeau d’un pharaon médecin (Ankhmahor) que fut retrouvé le premier témoignage de l’utilisation de la réflexologie. En effet, on peut observer sur son sarcophage la représentation et la réflexologie).
 

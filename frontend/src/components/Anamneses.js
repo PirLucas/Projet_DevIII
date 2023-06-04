@@ -143,9 +143,9 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
                                     null
                                 }
                                 </div>
-                            :
+                            : //s'il y a une anamnese
                                 <div>
-                                <button id={"bouton"+ String(value.clientID)} onClick={e =>voirAnamnese(value.clientID)}>voir anamnèse</button>
+
                                 {(clientAffiché == value.clientID)?
                                     <div>
                                         {(afficheOuModifie == 0) ?
@@ -161,7 +161,7 @@ function Anamneses(paramDict) {//doit commencer avec une majuscule
                                         }
                                     </div>
                                     :
-                                    null
+                                    <button id={"bouton"+ String(value.clientID)} onClick={e =>voirAnamnese(value.clientID)}>voir anamnèse</button>
                                 }
                                 </div>
                             }

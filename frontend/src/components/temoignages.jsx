@@ -1,6 +1,11 @@
 
 
 import React from "react";
+import Intro from "../assets/img/intro-bg.jpg";
+import '../assets/fonts/font-awesome.min.css';
+import '../assets/css/style-font.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function Temoignages(paramDict) {//doit commencer avec une majuscule
 
@@ -48,8 +53,8 @@ function Temoignages(paramDict) {//doit commencer avec une majuscule
     }
 
     return(
-        <div style={{border: "2px solid black"}}>
-            <h1 align={"center"}>TEMOIGNAGES</h1>
+        <div style={{border: "2px solid black"}} className="masthead" style={{backgroundImage: `url(${Intro})`}}>
+            <h1 align={"center"}>Vous voulez partager votre expérience?</h1>
             <form align={"center"} onSubmit={postTemoignage}>
                 <label>
                     Mail:

@@ -14,7 +14,9 @@ function Homepage() {
             <Header/>
             <Tarifs/>
             <Temoignages/>
-            <Contact/>
+            {
+                //<Contact/>
+            }
             <Footer/>
         </div>
     );
