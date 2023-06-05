@@ -2,8 +2,6 @@ var express = require('express');
 const database = require("../dbPool");
 var router = express.Router();
 
-
-
 //!!!!!ROUTE INUTILISEE (tests)
 
 

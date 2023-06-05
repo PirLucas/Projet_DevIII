@@ -39,7 +39,7 @@ function NavComponent() {
   }, [])
 
   return (
-    <div>
+    <div >
       <Helmet>
         <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" />
       </Helmet>
@@ -59,9 +59,9 @@ function NavComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ marginRight: '10px' }}/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-          <Nav.Link eventKey="1" href="#about" className="active">Qu'est-ce que c'est ?</Nav.Link>
+          <Nav.Link eventKey="1" href="/informations" className="active">Qu'est-ce que c'est ?</Nav.Link>
       <Nav.Link eventKey="2" href="#tarifs">Tarifs</Nav.Link>
-      <Nav.Link eventKey="3" href="#contact">Contact</Nav.Link>
+      <Nav.Link eventKey="3" href="#footerpad">Contact</Nav.Link>
       <Nav.Link eventKey="4" href="#videos">Videos</Nav.Link>
       <Nav.Link eventKey="5" href="/rendezvous" className="tada animated" style={{backgroundColor: "#5c9688"}}>PRENDRE RENDEZ-VOUS</Nav.Link>
           </Nav>

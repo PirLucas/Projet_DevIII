@@ -8,7 +8,9 @@ import {wait} from "@testing-library/user-event/dist/utils";
 
 
 
-test('MyComponent test', async () => {
+
+test('MyComponent test', () => {
+
 
         render(<AffichageTemoignages/>);
 

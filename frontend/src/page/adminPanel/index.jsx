@@ -26,7 +26,7 @@ function AdminPanel() {
     console.log(token);
 
     async function checkToken(){
-        await fetch('http://localhost:3000/adminPanel?',
+        await fetch( `${process.env.REACT_APP_URL}/adminPanel?`,
             {
                 method: 'GET',
                 headers: {
@@ -66,8 +66,6 @@ function AdminPanel() {
             </div>
         );
     }
-
-
 }
 
 export default AdminPanel;

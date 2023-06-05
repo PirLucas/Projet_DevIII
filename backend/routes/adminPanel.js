@@ -3,6 +3,7 @@ const express = require('express');
 const database = require("../dbPool");
 const moment = require("moment");
 const router = express.Router();
+
 const jwt = require ('jsonwebtoken');
 
 
@@ -27,6 +28,7 @@ router.get('/', async function(req, res) {
     }
 
 });
+
 
 router.get('/get-events', async (req, res) => {
   try {

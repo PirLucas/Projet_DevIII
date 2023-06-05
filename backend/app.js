@@ -7,6 +7,7 @@ var cors = require('cors')
 
 require('dotenv').config();
 
+
 var indexRouter = require('./routes/index');
 
 var rendezvousRouter = require('./routes/rendezvous');
@@ -16,6 +17,7 @@ var mediasRouter = require('./routes/medias');
 var temoignagesRouter = require('./routes/temoignages');
 var adminPanelRouter = require('./routes/adminPanel');
 var loginRouter = require('./routes/login');
+
 
 const app = express();
 
@@ -40,7 +42,7 @@ app.use('/medias', mediasRouter);
 app.use('/temoignages', temoignagesRouter);
 app.use('/adminPanel', adminPanelRouter);
 app.use('/login', loginRouter);
-app.use(cors())
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,6 +51,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res) {
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -58,4 +61,5 @@ app.use(function(err, req, res) {
   res.render('error');
 });
 
+app.listen(3000);
 module.exports = app;

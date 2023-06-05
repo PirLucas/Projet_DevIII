@@ -10,17 +10,32 @@ import '../assets/css/style-font.css';
 import Calendar from './Calendar';
 import Sidenav from './Sidenav';
 import AdminPanelGet from './AdminPanelGetInfo';
+import Anamneses from "./Anamneses";
+
 
 function AdminPanelInfo() {
 
     const [showCalendar, setShowCalendar] = useState(false);
-
+    const [showDashboard, setShowDashboard] = useState(true);
+    const [showAnamneses, setShowAnamneses] = useState(false);
     function handleCalendarClick() {
         setShowCalendar(true);
+        setShowDashboard(false);
+        setShowAnamneses(false);
+
     }
 
     function handleDashboardClick() {
         setShowCalendar(false);
+        setShowDashboard(true);
+        setShowAnamneses(false);
+    }
+
+    function handleAnamnesesClick() {
+        setShowCalendar(false);
+        setShowDashboard(false);
+        setShowAnamneses(true);
+
     }
 
 return (
@@ -48,19 +63,19 @@ return (
           <Sidenav
             onDashboardClick={handleDashboardClick}
             onCalendarClick={handleCalendarClick}
+            onAnamnesesClick={handleAnamnesesClick}
+
           />
-          {showCalendar ?
-           <div className='container'>
-            <   Calendar />
-            </div>: 
-            <div>
-            <   AdminPanelGet />
-            </div>}
+            {showCalendar && <   Calendar />}
+            {showDashboard && <   AdminPanelGet />}
+            {showAnamneses && <   Anamneses />}
+
           <div id="layoutSidenav_content">
             <main>
                 <Routes>
-                <Route path="/adminPanel" element={<ProtectedRoute component={AdminPanelInfo} />} />
-                <Route path="/adminPanel/calendar" element={<ProtectedRoute component={Calendar} />} />
+                    <Route path="/adminPanel" element={<ProtectedRoute component={AdminPanelInfo} />} />
+                    <Route path="/adminPanel/calendar" element={<ProtectedRoute component={Calendar} />} />
+
                 </Routes>
             </main>
           </div>
@@ -68,6 +83,5 @@ return (
     </div>
   );
 }
-
 export default AdminPanelInfo;
 
