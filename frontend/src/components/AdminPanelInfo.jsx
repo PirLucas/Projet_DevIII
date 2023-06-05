@@ -66,9 +66,11 @@ return (
             onAnamnesesClick={handleAnamnesesClick}
 
           />
+            <div className={"container"}>
             {showCalendar && <   Calendar />}
             {showDashboard && <   AdminPanelGet />}
             {showAnamneses && <   Anamneses />}
+            </div>
 
           <div id="layoutSidenav_content">
             <main>
@@ -84,4 +86,3 @@ return (
   );
 }
 export default AdminPanelInfo;
-

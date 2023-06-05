@@ -27,7 +27,7 @@ function AffichageTemoignages(paramDict) {//doit commencer avec une majuscule
             })
     }
     useEffect(() => {
-        getTemoignage()
+        getTemoignage();
     }, []);
 
 

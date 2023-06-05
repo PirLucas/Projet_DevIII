@@ -9,7 +9,7 @@ function Login() {
   async function handleSubmit(e){
     e.preventDefault();
 
-    await fetch('http://localhost:3000/login?',
+    await fetch(`${process.env.REACT_APP_URL}/login?`,
         {
             method: 'POST',
             body: JSON.stringify({
