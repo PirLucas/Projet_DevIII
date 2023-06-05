@@ -1,0 +1,78 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+
+    "@fullcalendar/daygrid": "6.1.7",
+    "@fullcalendar/react": "^6.1.6",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "eslint-config-react-app": "7.0.1",
+    "fullcalendar": "^6.1.6",
+    "jquery": "^3.6.4",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-admin": "^4.10.2",
+    "react-bootstrap": "^2.7.4",
+    "react-datepicker": "^4.11.0",
+    "react-datetime": "^3.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.8.0",
+    "react-modal": "^3.16.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "web-vitals": "3.3.1"
+  },
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test --coverage",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+	"react-router-dom": "^6.11.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+	"eject": "react-scripts eject"
+  },
+
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@types/bootstrap": "^5.2.6",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1",
+    "style-loader": "^3.3.2",
+    "styled-components": "^5.3.10"
+
+  }
+
+}
