@@ -45,10 +45,10 @@ router.get('/get-events', async (req, res) => {
 
 router.post('/create-event', async (req, res) => {
   try {
-    const clientID = req.body.extendedProps.clientID;
+    const clientID = req.body.clientID;
     const rdvCom = req.body.rdvCom;
     const rdvDate = req.body.rdvDate;
-    const end = req.body.rdvHeure;
+    const rdvHeure = req.body.rdvHeure;
     const result = await database.pool.query('INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure) values (?, ?, ?, ?)', [clientID, rdvCom, rdvDate, rdvHeure]);
       res.sendStatus(201);
   } catch (err) {
