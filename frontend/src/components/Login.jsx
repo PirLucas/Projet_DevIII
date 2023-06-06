@@ -57,17 +57,17 @@ function Login() {
       document.cookie = cookieString;
   }
 
-  /*if (loguer) {
-      useNavigate("/adminPanel");
-  }*/
-
-  return (
-      <form onSubmit={handleSubmit}>
-          <input required type="text" name="username" id="username" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" />
-          <input required type="password" name="password" id="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-          <button type="submit">Login</button>
-      </form>
-  );
+  if (loguer) {
+    window.location.href = "/adminPanel";
+  }
+  else {
+      return (
+        <form onSubmit={handleSubmit}>
+            <input required type="text" name="username" id="username" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" />
+            <input required type="password" name="password" id="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
+            <button type="submit">Login</button>
+        </form>
+    );}
 }
 
 export default Login;
