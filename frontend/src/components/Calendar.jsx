@@ -42,9 +42,9 @@ function Calendar() {
         try {
             const eventData = {
                 clientID: data.extendedProps.clientID, // Access clientID from extendedProps
-                title: data.title,
-                start: moment(data.start).format('YYYY-MM-DD HH:mm:ss'), // Format start datetime
-                end: moment(data.end).format('YYYY-MM-DD HH:mm:ss'), // Format end datetime
+                rdvCom: data.title,
+                rdvDate: moment(data.start).format('YYYY-MM-DD'), // Format start datetime
+                rdvHeure: moment(data.start).format('HH:mm:ss') // Format end datetime
               };
             const response = await fetch(`${process.env.REACT_APP_URL}/adminPanel/create-event`, {
                 method: "POST",
@@ -81,11 +81,12 @@ function Calendar() {
                 const parsedEvents = events.result.map((event) => ({
                     clientID: event.clientID,
                     clientNom: event.clientNom,
-                    title: event.title,
-                    start: moment(event.rdvStart).toDate(),
-                    end: moment(event.rdvEnd).toDate()
+                    title: event.rdvCom,
+                    start: moment(`${event.rdvDate} ${event.rdvHeure}`).toDate(),
+                    end: null
                   }));
                 setEvents(parsedEvents);
+                console.log(parsedEvents)
             } else {
                 console.error("Error getting events:", response.statusText);
             }
@@ -132,7 +133,6 @@ function Calendar() {
                 <Modal.Body>
                     <p style={{ color: 'black' }}>Client: {selectedEvent.extendedProps.clientNom}</p>
                     <p style={{ color: 'black' }}>Debut: {moment(selectedEvent.start).format('dddd D MMMM YYYY, HH:mm')}</p>
-                    <p style={{ color: 'black' }}>Fin: {selectedEvent.end ? moment(selectedEvent.end).format('dddd D MMMM YYYY, HH:mm') : ''}</p>
                     {/* Add any other event details you want to display */}
                 </Modal.Body>
                 <Modal.Footer>

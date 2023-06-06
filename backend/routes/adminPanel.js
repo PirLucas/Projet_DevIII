@@ -35,7 +35,7 @@ router.get('/get-events', async (req, res) => {
       const rdvStart = moment(req.query.start).format('YYYY-MM-DD HH:mm:ss');
       const rdvEnd = moment(req.query.end).format('YYYY-MM-DD HH:mm:ss');
 
-      const result = await database.pool.query('SELECT tablerdv.title, tablerdv.rdvStart, tablerdv.rdvEnd, tableclients.clientNom FROM tablerdv INNER JOIN tableclients ON tablerdv.clientID = tableclients.clientID');
+      const result = await database.pool.query('SELECT tablerdv.rdvCom, tablerdv.rdvDate, tablerdv.rdvHeure, tableclients.clientNom FROM tablerdv INNER JOIN tableclients ON tablerdv.clientID = tableclients.clientID');
       res.json({result});
       console.log(result);
   } catch (err) {
@@ -46,10 +46,10 @@ router.get('/get-events', async (req, res) => {
 router.post('/create-event', async (req, res) => {
   try {
     const clientID = req.body.extendedProps.clientID;
-    const title = req.body.title;
-    const start = req.body.start;
-    const end = req.body.end;
-    const result = await database.pool.query('INSERT INTO main_db.tablerdv(clientID, title, rdvStart, rdvEnd) values (?, ?, ?, ?)', [clientID, title, start, end]);
+    const rdvCom = req.body.rdvCom;
+    const rdvDate = req.body.rdvDate;
+    const end = req.body.rdvHeure;
+    const result = await database.pool.query('INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure) values (?, ?, ?, ?)', [clientID, rdvCom, rdvDate, rdvHeure]);
       res.sendStatus(201);
   } catch (err) {
       console.log(err);

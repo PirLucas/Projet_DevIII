@@ -7,7 +7,7 @@ function AddEventModal({isOpen, onClose, onEventAdded}) {
     const [clientID, setClient] = useState(0);
     const [title, setTitle] = useState("");
     const [start, setStart] = useState(new Date());
-    const [end, setEnd] = useState(new Date());
+    const [end, setEnd] = useState(null);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -52,17 +52,7 @@ function AddEventModal({isOpen, onClose, onEventAdded}) {
                         />
                 </div>
 
-                <div className="mb-3"style={{color: "black"}}>
-                    <label className="form-label">End Date</label>
-                    <br />
-                    <DatePicker selected={end} onChange={date => setEnd(date)} 
-                        showTimeSelect
-                        timeFormat="HH:mm"
-                        timeIntervals={15}
-                        timeCaption="Time"
-                        dateFormat="MMMM d, yyyy h:mm aa"
-                    />
-                </div>
+
 
                 <button type="submit" className="btn btn-primary">Add event</button>
 
