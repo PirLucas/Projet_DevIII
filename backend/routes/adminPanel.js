@@ -30,42 +30,66 @@ router.get('/', async function(req, res) {
 
 
 router.get('/get-events', async (req, res) => {
-  try {
-      const rdvStart = moment(req.query.start).format('YYYY-MM-DD HH:mm:ss');
-      const rdvEnd = moment(req.query.end).format('YYYY-MM-DD HH:mm:ss');
+    try {
+        const result = await database.pool.query(
+            `SELECT tablerdv.rdvID, tablerdv.clientID, tablerdv.rdvCom, tablerdv.rdvDate, tablerdv.rdvHeure, tablerdv.serviceOffer, CONCAT(tableclients.clientPrenom, ' ', tableclients.clientNom) AS clientNom 
+      FROM tablerdv 
+      INNER JOIN tableclients ON tablerdv.clientID = tableclients.clientID`
+        );
 
-      const result = await database.pool.query('SELECT tablerdv.rdvCom, tablerdv.rdvDate, tablerdv.rdvHeure, tableclients.clientNom FROM tablerdv INNER JOIN tableclients ON tablerdv.clientID = tableclients.clientID');
-      res.json({result});
-      console.log(result);
-  } catch (err) {
-      console.log(err);
-  }
+        res.json(result);
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+router.get('/get-clients', async (req, res) => {
+    try {
+        const result = await database.pool.query(
+            `SELECT DISTINCT clientID, CONCAT(clientPrenom, ' ', clientNom) AS clientNom 
+      FROM tableclients`
+        );
+
+        res.json(result);
+        console.log(result);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
 });
 
 router.post('/create-event', async (req, res) => {
   try {
-    const clientID = req.body.clientID;
-    const rdvCom = req.body.rdvCom;
-    const rdvDate = req.body.rdvDate;
-    const rdvHeure = req.body.rdvHeure;
-    const result = await database.pool.query('INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure) values (?, ?, ?, ?)', [clientID, rdvCom, rdvDate, rdvHeure]);
+      const { clientID, rdvCom, rdvDate, rdvHeure, serviceOffer } = req.body;
+
+      const result = await database.pool.query(
+          'INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure, serviceOffer) VALUES (?, ?, ?, ?, ?)',
+          [clientID, rdvCom, rdvDate, rdvHeure, serviceOffer]
+      );
+
       res.sendStatus(201);
+
   } catch (err) {
       console.log(err);
       res.status(500).json({ error: err.message });
   }
 });
 
-/*
-router.put('/', async function(req, res, next) {
-  res.send(`${req.query.anamneseID}`);
-});
+router.delete('/delete-event/:rdvID', async (req, res) => {
+    try {
+        const eventId = req.params.rdvID;
+        // Implement your delete event logic here
+        await database.pool.query('DELETE FROM main_db.tablerdv WHERE rdvID = ?', [eventId]);
 
-router.delete('/', function(req, res, next) {
-  res.send(`${req.query.anamneseID}`);
-});
-*/
 
+        res.sendStatus(200);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+    }
+});
 
 
 
