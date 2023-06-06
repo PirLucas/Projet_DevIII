@@ -31,9 +31,9 @@ function Calendar() {
         let calendarApi = calendarRef.current.getApi();
         calendarApi.addEvent({
             clientID: event.extendedProps.clientID,
-            title: event.title,
-            start: moment(event.start).toDate(),
-            end: moment(event.end).toDate()
+            title: event.rdvCom,
+            start: moment(event.rdvDate).toDate(),
+            end: moment(event.rdvHeure).toDate()
             
         });
     };
