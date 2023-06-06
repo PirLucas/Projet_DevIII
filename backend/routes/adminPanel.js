@@ -10,7 +10,7 @@ const jwt = require ('jsonwebtoken');
 router.get('/', async function(req, res) {
     if (!req.headers.authorization) {
         res.status(401).json({message: "Unauthorized"});
-        res.send('Unauthorized');
+	return;
     }
 
     // Bearer <token>>
@@ -24,7 +24,6 @@ router.get('/', async function(req, res) {
 
     } catch (error) {
         res.status(401).json({message: "Unauthorized"});
-        res.send('Unauthorized');
     }
 
 });

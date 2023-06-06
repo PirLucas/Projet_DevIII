@@ -55,7 +55,7 @@ function AdminPanel() {
     else {
         return (
             <div className="admin-panel">
-                <div className="card">
+                <div className="card" style={{margin: "0px"}}>
                     <div className="card-header">
                         <div className="text-header">Accès refusé</div>
                     </div>

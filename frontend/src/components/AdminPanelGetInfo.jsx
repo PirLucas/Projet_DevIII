@@ -11,7 +11,7 @@ function AdminPanelGet() {
         </div>
         <div className="row">
             <div className="col-12" style={{marginBottom: "20px"}}>
-                <div className="card">
+                <div className="card" style={{margin: "0px"}}>
                     <div className="card-body">
                         <h4 className="text-muted card-title"><strong>Filtres</strong></h4>
                         <div className="row">
