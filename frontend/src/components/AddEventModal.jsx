@@ -31,11 +31,9 @@ function AddEventModal({ isOpen, onClose, onEventAdded }) {
 
     const onSubmit = (e) => {
         e.preventDefault();
-
         const client = selectedClient
             ? clients.find((client) => client.clientID === parseInt(selectedClient))
             : null;
-
         onEventAdded({
             extendedProps: {
                 clientID: client ? client.clientID : null,

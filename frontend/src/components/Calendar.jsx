@@ -31,9 +31,10 @@ function Calendar() {
 
     const onEventAdded = event => {
         let calendarApi = calendarRef.current.getApi();
+	console.log("eventt",event)
         calendarApi.addEvent({
             clientID: event.extendedProps.clientID,
-            serviceOffer: event.extendedProps.serviceOffer,
+            service: event.extendedProps.serviceOffer,
             title: event.title,
             start: moment(event.rdvDate).toDate(),
             end: moment(event.rdvHeure).toDate()
@@ -43,14 +44,15 @@ function Calendar() {
 
     async function handleEventAdd(data) {
         try {
+		console.log("dataa", data)
             const eventData = {
                 clientID: data.extendedProps.clientID, // Access clientID from extendedProps
-                serviceOffer: data.extendedProps.serviceOffer,
+                service: data.extendedProps.service,
                 rdvCom: data.title,
                 rdvDate: moment(data.start).format('YYYY-MM-DD'), // Format start datetime
                 rdvHeure: moment(data.start).format('HH:mm:ss'), // Format end datetime
               };
-            console.log(eventData);
+            console.log("eventData", eventData);
             const response = await fetch(`${process.env.REACT_APP_URL}/adminPanel/create-event`, {
                 method: "POST",
                 headers: {
@@ -93,7 +95,7 @@ function Calendar() {
                         title: event.rdvCom,
                         start: moment(`${event.rdvDate} ${event.rdvHeure}`).toDate(),
                         end: null,
-                        serviceOffer: event.serviceOffer,
+                        serviceOffer: event.service,
                         clientNom: event.clientNom,
                     }));
                     setEvents(parsedEvents);

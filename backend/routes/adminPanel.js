@@ -32,7 +32,7 @@ router.get('/', async function(req, res) {
 router.get('/get-events', async (req, res) => {
     try {
         const result = await database.pool.query(
-            `SELECT tablerdv.rdvID, tablerdv.clientID, tablerdv.rdvCom, tablerdv.rdvDate, tablerdv.rdvHeure, tablerdv.serviceOffer, CONCAT(tableclients.clientPrenom, ' ', tableclients.clientNom) AS clientNom 
+            `SELECT tablerdv.rdvID, tablerdv.clientID, tablerdv.rdvCom, tablerdv.rdvDate, tablerdv.rdvHeure, tablerdv.service, CONCAT(tableclients.clientPrenom, ' ', tableclients.clientNom) AS clientNom 
       FROM tablerdv 
       INNER JOIN tableclients ON tablerdv.clientID = tableclients.clientID`
         );
@@ -62,11 +62,11 @@ router.get('/get-clients', async (req, res) => {
 
 router.post('/create-event', async (req, res) => {
   try {
-      const { clientID, rdvCom, rdvDate, rdvHeure, serviceOffer } = req.body;
+      const { clientID, rdvCom, rdvDate, rdvHeure, service } = req.body;
 
       const result = await database.pool.query(
-          'INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure, serviceOffer) VALUES (?, ?, ?, ?, ?)',
-          [clientID, rdvCom, rdvDate, rdvHeure, serviceOffer]
+          'INSERT INTO main_db.tablerdv(clientID, rdvCom, rdvDate, rdvHeure, service) VALUES (?, ?, ?, ?, ?)',
+          [clientID, rdvCom, rdvDate, rdvHeure, service]
       );
 
       res.sendStatus(201);
